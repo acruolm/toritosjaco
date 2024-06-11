@@ -1,0 +1,624 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto Condensed' sans-serif;
+}
+
+/*Estilos para Menú de navegación*/
+
+.nav{
+	position: relative;
+	display: flex;
+    position: fixed;
+   	justify-content: right;
+    background-color: #000e;
+    width: 100%;
+    height: 95px;
+    z-index: 1;
+}
+
+.logo {
+	position: absolute;
+	left: 0;
+	margin: 30px 50px;
+	height: 40px;	
+}
+
+.nav__list{
+	display: flex; 
+	align-items: center;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.nav__item{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	padding: 0 5px;
+	margin: 0 30px;
+}
+
+.link{
+	text-decoration: none;
+	color: #fff;
+}
+
+/*Estilos para icono de menú de navegación responsive*/
+
+.open {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    margin: 20px 30px;
+    display: none;
+}  
+
+
+/*Estilos para artículo principal*/
+
+
+.container__article{
+	font-family: 'Roboto Condensed', sans-serif;	
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin: 150px 200px 50px 200px;
+}
+
+.container__headline{
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: initial;
+}
+
+.container__info{
+	font-size: 18px;
+	margin-top: 15px;
+	letter-spacing: 1.3px;
+	line-height: 25px;
+}
+
+.container__span{
+	font-weight: bolder;
+}
+
+/*Estilos para Grid contenedor de fotos*/
+
+.container__photos{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.container__item{
+	position: relative;
+	overflow: hidden;
+	height: 450px;
+	filter: brightness(55%) saturate(1.5);
+	transition: .8s;
+}
+
+.container__image{
+	cursor: auto;
+	overflow: hidden;
+	width: 100%;
+	height:100%;
+	object-fit: cover;
+	transition: .8s;	
+}
+
+.container__card{
+	display: flex;
+	flex-direction: column;
+	position:absolute;
+	bottom: 10px;
+	left: 15px;
+	background-color: #000c;
+	width: 320px;
+	height: 65px;
+	margin-top: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+	transition: 0.4s;
+}
+
+.container__title{
+	margin-top: 10px;
+	margin-bottom: 2px;
+	margin-left: 15px;
+	color: #fffd;
+	font-size: 12px;
+	letter-spacing: 3px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.container__paragraph{
+	margin: 0 15px;
+	color: #fff;
+	font-size: 21px;
+	letter-spacing: 1px;
+	font-family: 'Arial black', sans-serif;
+}
+
+.container__paragraph--small{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+	visibility: hidden;
+	line-height: 16px;
+}
+
+
+/*Estilos para Footer*/
+
+.footer{
+	position: relative;
+	margin-top: 80px;
+	background-color: #000;
+	list-style: none;
+}
+
+.footer__title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+	color: #000b;
+	font-family: 'Arial black', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	background-color: #bdecb6;
+	height: 80px;
+}
+
+.fa-seedling{
+	font-size: 25px;
+	color: #339C09;
+}
+
+.footer__list{
+	margin-top: 100px;
+	list-style: none;
+	padding: 0;
+	text-transform: capitalize;
+	margin-left: 50px;
+}
+
+.footer__listitem{
+	padding: 5px 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+}
+
+.fa-whatsapp{
+	font-size: 25px;
+}
+
+.footer__socialmedia{
+	display: flex;
+	justify-content: right;
+	margin-right: 50px;
+	color: #fffb;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+}
+
+.footer__list2{
+	display: flex;
+	justify-content: right;
+	margin-right: 50px;
+	list-style: none;
+	padding: 0;
+}
+
+.footer__listitem2{
+	font-size: 30px;
+	padding: 0 25px;
+}
+
+.foooter__copyright{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 11px;
+	font-weight: bolder;
+	color: #000b;
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 1.3px;
+	background-color: #fff;
+	height: 35px;
+	margin: 0;
+}
+
+/*Sección de hover para efectos y distribución de Grid*/
+
+.link:hover{
+	color: #00ffff;
+	transition: 1s;
+}
+
+.container__item:hover {
+	filter: brightness(90%) saturate(1.5);
+	transition: .8s;
+}
+
+	/*.container__item:nth-child(1){
+		grid-column-start: span 2;
+	}
+
+	.container__item:nth-child(3){
+		grid-column-start: span 3;
+		height: 700px;
+	}*/
+
+.container__image:hover{
+	transform: scale(1.08);
+	transition: .8s;
+}
+
+.container__item:hover .container__card  {
+	height: 130px;
+	transition: 0.4s;
+}
+
+
+.container__item:hover .container__card--smaller  {
+	height: 120px;
+	transition: 0.4s;
+}
+
+
+.container__item:hover .container__card--smallest  {
+	height: 100px;
+	transition: 0.4s;
+}
+
+
+.container__item:hover .container__paragraph--small {
+	visibility: visible;
+}
+
+.container__paragraph--brickred{
+	color: #b73239;
+}
+
+
+/*Se oculta checkbox para menú responsive*/
+
+#check {
+	display: none;
+}
+
+
+/*Reponsive para dispositivos tipo Nest Hub*/
+
+@media  only screen and (max-width: 1024px){	    
+    .nav__item {
+    	margin: 0 30px;
+    	padding: 30px 0;
+    }  
+
+    .container__card{
+		left: 10px;	
+		width: 280px;
+		height: 65px;
+	}
+
+	.container__paragraph{
+		font-size: 18px;
+	}
+
+	.container__paragraph--small{
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.container__item:hover .container__card  {
+		height: 125px;
+	}
+
+	.container__item:hover .container__card--smaller  {
+		height: 110px;
+	}
+
+	.container__item:hover .container__card--smallest  {
+		height: 95px;
+	}
+}
+
+/*Responsive para disposiivos tipo Surface Duo, ipad Mini, Ipad Air y Surface Pro 7*/
+
+@media  only screen and (max-width: 912px){
+	 .open {
+    	display: block;
+    }
+
+   	.nav__list{
+   		position: fixed;
+		display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        background-color: #000e;
+        transition: all .5s ease-in-out;
+        top: 90px;
+        padding: 0;
+    }
+    
+    .nav__item {
+    	margin: 0 50px;
+    	font-size: 25px;
+    	padding: 30px 0;
+    }
+   
+	.container__article{
+		margin: 120px 60px 30px 60px;
+	}
+
+	.container__headline{
+		font-size: 35px;
+	}
+
+	.container__info{
+		font-size: 15px;
+	}
+
+	.container__photos{
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 20px;
+	}
+
+	.footer__title{
+		font-size: 18px;
+		height: 60px;
+	}
+
+	.footer__list{
+		margin-left: 35px;
+	}
+
+	.container__item:nth-child(1){
+		grid-column-start: span 1;
+		height: 400px;
+	}
+
+	.container__item:nth-child(2){
+		grid-column-start: span 1;
+		height: 600px;
+	}
+
+	.container__item:nth-child(3){
+		grid-column-start: span 1;
+		height: 500px;
+	}
+
+	 #check:checked ~ .nav__list {
+    	left: 0;
+    }
+}
+
+/*Responsive para disposiivos tipo Smartphone Iphone 12*/
+
+@media  only screen and (max-width: 414px){
+	.logo {
+		margin: 30px 35px;
+		height: 40px;
+	}
+
+	 .nav__item {
+    	margin: 0 35px;
+    	font-size: 18px;
+    	padding: 20px 0;
+    }
+
+    .container__article{
+		margin: 120px 15px 30px 15px;
+	}
+
+	.container__headline{
+		font-size: 24px;
+	}
+
+	.container__info{
+		font-size: 13px;
+	}
+
+	.container__title{
+		font-size: 11px;
+	}
+
+	.container__paragraph{
+		font-size: 14px;
+		margin-bottom: 4px;
+	}
+
+	.container__paragraph--small{
+		font-size: 11px;
+		line-height: 12px;
+	}
+
+	.container__card{
+		bottom: 5px;
+		height: 55px;
+	}
+
+	.footer__title{
+		height: 50px;
+		font-size: 13.5px;
+	}
+
+	.footer__listitem{
+		font-size: 14px;
+	}
+
+	.fa-whatsapp{
+	font-size: 18px;
+	}
+
+	.footer__socialmedia{
+		display: flex;
+		justify-content: center;
+		font-size: 15px;
+		margin: 0;
+	}
+
+	.footer__list2{
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+	}
+
+	.footer__listitem2{
+		display: flex;
+		justify-content: center;
+		font-size: 20px;
+		margin: 10px 0;
+		font-size: 25px;
+	}
+
+	.foooter__copyright{
+		text-align: center;
+		font-size: 8px;
+	}
+
+	.container__item:nth-child(1){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:nth-child(2){
+		height: 300px;
+	}
+
+	.container__item:nth-child(3){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:nth-child(4){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:nth-child(7){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:nth-child(8){
+		width: 100%;
+		height: 300px;
+	}
+	
+	.container__item:nth-child(9){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:hover .container__card  {
+		height: 105px;
+	}
+
+	.container__item:hover .container__card--smaller  {
+		height: 90px;
+	}
+
+	.container__item:hover .container__card--smallest  {
+		height: 80px;
+	}
+}
+
+
+/*Responsive para disposiivos tipo Galaxy Fold*/
+
+@media  only screen and (max-width: 280px){
+	.container__card{
+		left: 5px;
+		bottom: 10px;
+		width: 224px;
+		height: 60px;
+	}
+
+	
+	.container__title{
+		margin-top: 10px;
+		margin-bottom: 4px;
+		margin-left: 13px;
+		font-size: 11px;
+		letter-spacing: 2px;
+	}
+
+	.container__paragraph{
+		margin: 0 13px;
+		font-size: 15px;
+		letter-spacing: 1px;
+	}
+
+	.container__paragraph--small{
+		font-size: 12px;
+		letter-spacing: 0;
+	}
+
+	.foooter__copyright{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 7.5px;
+    letter-spacing: 0;
+  	}
+
+	.container__item:hover .container__card  {
+		height: 100px;
+	}
+
+	.container__item:nth-child(1){
+		width: 100%;
+		height: 200px;
+	}
+
+	.container__item:nth-child(2){
+		height: 200px;
+	}
+
+	.container__item:nth-child(3){
+		width: 100%;
+		height: 200px;
+	}
+
+	.container__item:nth-child(4){
+		width: 100%;
+		height: 200px;
+	}
+
+	.container__item:nth-child(5){
+		width: 100%;
+		height: 300px;
+	}
+
+	.container__item:nth-child(6){
+		width: 100%;
+		height: 250px;
+	}
+	.container__item:nth-child(7){
+		width: 100%;
+		height: 200px;
+	}
+
+	.container__item:nth-child(8){
+		width: 100%;
+		height: 200px;
+	}
+	
+	.container__item:nth-child(9){
+		width: 100%;
+		height: 200px;
+	}
+}

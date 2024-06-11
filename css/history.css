@@ -1,0 +1,425 @@
+ *{
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #ffffff;
+  color: #4c4c4c;
+}
+
+a:active, a:hover{
+  color: #00ffff;;
+  transition: 1s;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: scale(0.9) translateX(350px);
+  transition: opacity 1.5s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+
+/*Estilos para Menú de navegación*/
+
+.nav{
+  display: flex;
+    position: fixed;
+    justify-content: right;
+    background-color: #000;
+    width: 100%;
+    height: 95px;
+    z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  margin: 30px 50px;
+  height: 40px; 
+}
+
+.nav__list{
+  display: flex; 
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.nav__item{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  padding: 0 5px;
+  margin: 0 30px;
+}
+
+.link{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Estilos para icono de menú de navegación responsive*/
+
+.open {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    margin: 20px 30px;
+    display: none;
+}  
+
+/*Estilos para time line*/
+
+
+.timeline-header {
+  position: relative;
+  margin-top: 50px;
+}
+
+.timeline-header__title {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.timeline-header__subtitle {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin: 15px 40px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+.timeline-header__span{
+  font-weight: bolder;
+}
+
+
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 650px;
+  position: relative;
+}
+
+
+
+.timeline__content{
+ margin-top: 60px;
+}
+
+.timeline__content-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  
+  
+}
+.timeline__content-desc {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 1.4px;
+}
+
+
+ .timeline-item {
+    width: 100%;
+    padding: 0 30px 30px 30px;
+  }
+
+
+  .timeline__img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .timeline-container {
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+  }
+
+
+/*Estilos para Footer*/
+
+.footer{
+  position: relative;
+  margin-top: 80px;
+  background-color: #000;
+  list-style: none;
+}
+
+.footer__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #000b;
+  font-family: 'Arial black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  background-color: #bdecb6;
+  height: 80px;
+}
+
+.fa-seedling{
+  font-size: 25px;
+  color: #339C09;
+}
+
+.footer__list{
+  margin-top: 100px;
+  list-style: none;
+  padding: 0;
+  text-transform: capitalize;
+  margin-left: 50px;
+}
+
+.footer__listitem{
+  padding: 5px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+}
+
+.fa-whatsapp{
+  font-size: 25px;
+}
+
+.footer__socialmedia{
+  display: flex;
+  justify-content: right;
+  margin-right: 50px;
+  color: #fffb;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.footer__list2{
+  display: flex;
+  justify-content: right;
+  margin-right: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__listitem2{
+  font-size: 30px;
+  padding: 0 25px;
+}
+
+.foooter__copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: bolder;
+  color: #000b;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 1.3px;
+  background-color: #fff;
+  height: 35px;
+  margin: 0;
+}
+
+#check {
+  display: none;
+}
+
+/*Responsive para disposiivos tipo Surface Pro 7*/
+
+@media  only screen and (max-width: 915px){
+
+  .nav__list{
+    margin-right: 50px;
+  }
+
+  .nav__item{
+    margin: 0;
+    padding: 0 18px;
+  }
+}
+
+
+/*Responsive para disposiivos tipo iPad Air */
+
+@media  only screen and (max-width: 851px){
+
+  .nav__item{
+    padding: 0 12px;
+  }
+}
+
+
+
+/*Responsive para disposiivos tipo iPad Mini */
+
+@media  only screen and (max-width: 768px){
+
+  .nav__item{
+    padding: 0 8px;
+  }
+}
+
+/*Responsive para disposiivos tipo Surface Duo*/
+@media only screen and (max-width: 740px){
+
+  .open {
+      display: block;
+    }
+
+    .nav__list{
+      position: fixed;
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        background-color: #000e;
+        transition: all .5s ease-in-out;
+        top: 90px;
+        padding: 0;
+    }
+    
+    .nav__item {
+      margin: 0 50px;
+      font-size: 25px;
+      padding: 30px 0;
+    }
+
+   #check:checked ~ .nav__list {
+      left: 0;
+    }
+}
+
+
+/*Responsive para disposiivos tipo iphone SE, iphone XR, Iphone 12, Pixel 5, Galaxy S8+, Galaxy S20, Galaxy A51 */
+
+@media  only screen and (max-width: 414px){
+
+  .logo {
+    margin: 30px 35px;
+    height: 40px;
+  }
+
+  .nav__item {
+    margin: 0 35px;
+    font-size: 18px;
+    padding: 20px 0;
+  }
+
+
+
+   .timeline-header__title{
+    font-size: 34px;
+  }
+
+ .timeline-header__subtitle{
+    font-size: 13.5px;
+    line-height: 15px;
+    letter-spacing: 1px;
+  }
+
+  .timeline__content-title{
+    font-size: 40px;
+  }
+
+  .timeline__content-desc{
+    font-size: 15px;
+  }
+
+  .footer__title{
+    height: 50px;
+    font-size: 13.5px;
+  }
+
+  .footer__list{
+    margin-left: 35px;
+  }
+
+  .footer__listitem{
+    font-size: 14px;
+  }
+
+  .fa-whatsapp{
+  font-size: 18px;
+  }
+
+  .footer__socialmedia{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .footer__list2{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__listitem2{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin: 10px 0;
+    font-size: 25px;
+  }
+
+  .foooter__copyright{
+    text-align: center;
+    font-size: 8px;
+  }
+}
+
+
+/*Responsive para disposiivos tipo Galaxy Fold*/
+
+@media  only screen and (max-width: 280px){
+  
+   .timeline-header__title{
+    font-size: 28px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding: 0 10px 20px 10px;
+  }
+
+ .timeline-header__subtitle{
+    margin: 15px;
+    font-size: 12.5px;
+  }
+
+   .timeline__content-desc{
+    font-size: 14px;
+  }
+
+ .foooter__copyright{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 7.5px;
+    letter-spacing: 0;
+  }
+}
